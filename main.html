@@ -9,27 +9,28 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
-			arr.sort;
-			let max = arr[arr.length -1];
-			let max2=-infinity;
-			for (let i = arr.length-2; i >= 0; i--) {
-				if(max2 < max){
-					return max2;
-				}
-			}
-			return max2;
-		}
+    //Write your code here
+    arr.sort();
+    let max = arr[arr.length -1];
+    let max2=Number.POSITIVE_INFINITY;
+    for (let i = arr.length-2; i >= 0; i--) {
+        if(arr[i] < max){
+            max2 = arr[i];
+            return max2;
+        }
+    }
+    return max2
+}
 
-		function Main() {
-			var n = prompt("Enter the number of elements");
-			var arr = [];
-			for (var i = 0; i < n; i++) {
-				arr[i] = prompt("Enter element " + (i+1));
-			}
-			alert(secondHighest(arr));
-		}
-		Main();
+function Main() {
+    var n = prompt("Enter the number of elements");
+    var arr = [];
+    for (var i = 0; i < n; i++) {
+        arr[i] = prompt("Enter element " + (i+1));
+    }
+    alert(secondHighest(arr));
+}
+Main();
 	</script>
 
     <script type="text/javascript" src="./script.js">
